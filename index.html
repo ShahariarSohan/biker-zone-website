@@ -5,28 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biker Zone</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
     <!-- tailwind and daisy ui cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .font-poppins{
-            font-family: 'Poppins', sans-serif;
+    <!-- common color -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                "clr-primary": '#E76F51',
+              }
+            }
+          }
         }
-        .font-inter{
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
+      </script>
+    <!-- google font poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+        <style>
+            .font-poppins{
+                font-family: 'Poppins', sans-serif;
+            }
+        </style>
+        
 </head>
 
 <body>
-    <header>
+    <header class="font-poppins    md:container md:mx-auto  ">
         <div class="navbar bg-base-100">
-            <div class="navbar-start">
+            <div class="flex-1">
                 <div class="dropdown">
                     <label tabindex="0" class="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -36,29 +47,29 @@
                         </svg>
                     </label>
                     <ul tabindex="0"
-                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-xl">
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52  text-base font-medium">
                         <li><a>Home</a></li>
                         <li><a>Shop</a></li>
                         <li><a>News</a></li>
                         <li><a>Contact</a></li>
                     </ul>
                 </div>
-                <a class="btn btn-ghost  text-xl capitalize ">go ride</a>
+                <a class="btn btn-ghost  text-4xl font-bold capitalize ">go ride</a>
             </div>
-            <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal px-1 text-xl">
+            <div class=" hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-base font-medium">
                     <li><a>Home</a></li>
                     <li><a>Shop</a></li>
                     <li><a>News</a></li>
                     <li><a>Contact</a></li>
                 </ul>
             </div>
-            <div class="navbar-end">
-                <a class="btn btn-warning">Button</a>
+            <div class="">
+                <a class="btn btn-warning bg-clr-primary text-white">Button</a>
             </div>
         </div>
     </header>
-    <main></main>
+    <main class="md:container md:mx-auto"></main>
     <footer></footer>
 </body>
 
